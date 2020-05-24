@@ -1,0 +1,12 @@
+[Unit]
+Description=Bologna Bus Telegram Bot
+After=network.target
+
+[Service]
+User=user
+Group=user
+WorkingDirectory=/data/daemon/tper_telegram_bot/
+ExecStart= /bin/python main.py > /data/daemon/tper_telegram_bot/bot.log 2>&1"
+
+[Install]
+WantedBy=multi-user.target
